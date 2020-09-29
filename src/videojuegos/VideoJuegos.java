@@ -1,6 +1,6 @@
 
 package videojuegos;
-//nuevo 1n 
+
 import java.util.Date;
 
 
@@ -82,7 +82,32 @@ public class VideoJuegos {
    
    
     public static void main(String[] args) {
-      
+      VideoJuegos VideoJuegoUno = new VideoJuegos(
+              "Haloon Manituká",
+              15,
+              new Date (),
+              "Acción, Romance, Aventura y drama",
+              false);
+      VideoJuegos VideoJuegoDos = new VideoJuegos (
+              "Statik Manik",
+              11,
+              new Date (),
+              "Terror, Accion y suspenso",
+              false);
+    
+        System.out.println(VideoJuegoUno.getNumeroDePersonajes());
+        System.out.println(VideoJuegoUno.getGeneroDelJuego());
+        System.out.println(VideoJuegoUno.getNombre());
+        
+        
+        VideoJuegoUno.agregarPersonajes();
+    
+        
+        System.out.println(VideoJuegoUno.getNumeroDePersonajes());
+        System.out.println(VideoJuegoUno.getGeneroDelJuego());
+        System.out.println(VideoJuegoUno.getNombre());
+    
+    
     }
     
 }
