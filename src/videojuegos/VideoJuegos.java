@@ -6,12 +6,12 @@ import java.util.Date;
 
 public class VideoJuegos {
 
-   private String nombre;
-   private int numeroDePersonajes;
-   private Date fechaDeDesarrollo;
-   private String GeneroDelJuego;
-   private Boolean AptoParaMenores;
-
+   private String nombre; //Este nos permite ver el nombre del videojuego
+   private int numeroDePersonajes; //Este nos permite ver el numero de personajes disponibles en el juego
+   private Date fechaDeDesarrollo; //Este nos permite ver la fecha de desarrollo del juego
+   private String GeneroDelJuego; //Este nos permite ver el genero del juego
+   private Boolean AptoParaMenores; //Este nos permite ver si el juego es apto para menores con true o false
+//Aqui empieza el constructor de la clase
     public VideoJuegos(String nombre,
             int numeroDePersonajes,
             Date fechaDeDesarrollo,
@@ -38,7 +38,7 @@ public class VideoJuegos {
    this.AptoParaMenores = true;
    this.GeneroDelJuego = nuevoGenero;
 }
-
+//aqui empieza el metodo get set
     public String getNombre() {
         return nombre;
     }
