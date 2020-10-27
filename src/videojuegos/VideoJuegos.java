@@ -12,6 +12,26 @@ public class VideoJuegos {
    private String GeneroDelJuego; //Este nos permite ver el genero del juego
    private Boolean AptoParaMenores; //Este nos permite ver si el juego es apto para menores con true o false
 //Aqui empieza el constructor de la clase
+   
+   private Persona personaje = null;
+   private Instalar instalador;
+
+    public Persona getPersonaje() {
+        return personaje;
+    }
+
+    public void setPersonaje(Persona personaje) {
+        this.personaje = personaje;
+    }
+
+    public Instalar getInstalador() {
+        return instalador;
+    }
+
+    public void setInstalador(Instalar instalador) {
+        this.instalador = instalador;
+    }
+   
     public VideoJuegos(String nombre,
             int numeroDePersonajes,
             Date fechaDeDesarrollo,
@@ -22,6 +42,7 @@ public class VideoJuegos {
         this.fechaDeDesarrollo = fechaDeDesarrollo;
         this.GeneroDelJuego = GeneroDelJuego;
         this.AptoParaMenores = AptoParaMenores;
+        this.instalador = new Instalar(2, 512, "Origin");
     }
    
     //Este método me permite agregar personajes en cantidad de a 1
@@ -88,26 +109,18 @@ public class VideoJuegos {
               new Date (),
               "Acción, Romance, Aventura y drama",
               false);
-      VideoJuegos VideoJuegoDos = new VideoJuegos (
-              "Statik Manik",
-              11,
-              new Date (),
-              "Terror, Accion y suspenso",
-              false);
-    
-        System.out.println(VideoJuegoUno.getNumeroDePersonajes());
-        System.out.println(VideoJuegoUno.getGeneroDelJuego());
-        System.out.println(VideoJuegoUno.getNombre());
-        
-        
-        VideoJuegoUno.agregarPersonajes();
-    
-        
-        System.out.println(VideoJuegoUno.getNumeroDePersonajes());
-        System.out.println(VideoJuegoUno.getGeneroDelJuego());
-        System.out.println(VideoJuegoUno.getNombre());
-    
-    
+      
+      Mario juegoInstalado = new Mario("Mario", 
+              "Bombas", 
+              "Samu_234", 
+              2000);
+      
+      VideoJuegoUno.setPersonaje(juegoInstalado);
+      
+        System.out.println("Nombre del juego:");
+        System.out.println(VideoJuegoUno.getPersonaje().getNombre());
+        System.out.println("La cantidad de puntos en el juego son:");
+        System.out.println(VideoJuegoUno.getPersonaje().getPuntos());
     }
     
 }
