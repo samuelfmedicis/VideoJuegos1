@@ -44,6 +44,7 @@ public class VideoJuegos {
         this.AptoParaMenores = AptoParaMenores;
         this.instalador = new Instalar(2, 512, "Origin");
     }
+    
    
     //Este método me permite agregar personajes en cantidad de a 1
    public void agregarPersonajes() {
@@ -60,6 +61,7 @@ public class VideoJuegos {
    this.GeneroDelJuego = nuevoGenero;
 }
 //aqui empieza el metodo get set
+    
     public String getNombre() {
         return nombre;
     }
@@ -106,7 +108,7 @@ public class VideoJuegos {
       VideoJuegos VideoJuegoUno = new VideoJuegos(
               "Haloon Manituká",
               15,
-              new Date (),
+              new Date(),
               "Acción, Romance, Aventura y drama",
               false);
       
